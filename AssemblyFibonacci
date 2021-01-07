@@ -1,1 +1,16 @@
+.global _start
+_start:
 
+MOV R0, #0 
+MOV R1, #0 
+MOV R2, #1
+MOV R3, #0
+WHILE:
+CMP R3, #7 
+BEQ END 
+ADD R0,R1,R2
+MOV R2,R1 
+MOV R1,R0 
+ADD R3,R3,#1 
+B WHILE
+END:
