@@ -1,1 +1,17 @@
 
+.global _start
+_start:
+
+MOV R0, #3 // a0 = 1
+MOV R1, #6 // r = 6
+MOV R2, #9 // n = 8
+MOV R3, #1 // i = 1
+FOR:
+     CMP R3, R2
+     BEQ END 
+     ADD R1, R1, R0 
+     ADD R3, R3, #1
+     B FOR
+END:
+	
+	
