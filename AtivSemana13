@@ -1,1 +1,13 @@
+Leitura de pino:
 
+LDR R0, [R0, #12]
+AND R0, R0, R1
+CMP R0, #0
+IT NE
+MOVNE R0, #1
+
+Escrita de pino:
+
+LDR R2, [R0, #12]!
+EOR R2,R1,R2
+STR R2,[R0]
